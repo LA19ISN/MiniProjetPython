@@ -1,0 +1,25 @@
+def Valeurs():
+    e = 0
+    print ('Ce programme va trouver les multiples de 5 compris entre A et B puis va en faire la somme')
+    print ('Choisissez A')
+    A=int (input())
+    print ('Choisissez B')
+    B=int (input())
+    if B-A<=0:
+        print ("Le programme n'est pas fait pour les résultats négatifs")
+    return A,B,e
+
+def Calcul(A,B,e):
+    for x in range (A, B):
+        y = x % 5
+        if y==0:
+            e+=x
+    return y,x,e
+
+def Affichage(e):
+    print ('Le total est de',e)
+
+A,B,e=Valeurs()
+if B-A>0:
+    y,x,e=Calcul(A,B,e)
+    Affichage(e)
